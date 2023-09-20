@@ -1,0 +1,80 @@
+$LightCyan: hsl(193, 38%, 86%);
+$NeonGreen: hsl(150, 100%, 66%);
+$GrayishBlue: hsl(217, 19%, 38%);
+$DarkGrayishBlue: hsl(217, 19%, 24%);
+$DarkBlue: hsl(218, 23%, 16%);
+
+$size: 28px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    body {
+        font-family: 'Manrope', sans-serif;
+        background-color: $DarkBlue;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .advice {
+            width: 500px;
+            background-color: $DarkGrayishBlue;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            p {
+                text-transform: uppercase;
+                color: $NeonGreen;
+                letter-spacing: 5px;
+                font-size: 15px;
+                margin: 20px 0 10px 0;
+            }
+            q {
+                margin: 25px 0;
+                font-size: 28px;
+                color: $LightCyan;
+            }
+            > img {
+                margin: 20px;
+            }
+            button {
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: none;
+                outline: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $NeonGreen;
+                transition: 0.3s;
+                cursor: pointer;
+                &:hover {
+                    box-shadow: hsl(150, 100%, 66%) 0px 7px 29px 0px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        .advice {
+            width: 92% !important;
+            margin: auto !important;
+            padding: 20px !important;
+            q {
+                font-size: 23px !important;
+            }
+        }
+    }
+}
